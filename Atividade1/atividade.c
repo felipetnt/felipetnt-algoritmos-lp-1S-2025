@@ -8,9 +8,9 @@ int main(){
     printf("Insira sua idade: ");
     scanf("%d", &idade);
     printf("Insira sua peso: ");
-    scanf("%d", &peso);
+    scanf("%f", &peso);
     printf("Insira sua altura: ");
-    scanf("%d", &altura);
+    scanf("%f", &altura);
 
     // IMC - altura sobre peso ao quadrado;
 
@@ -19,6 +19,7 @@ int main(){
     printf("Voce tem %d anos.\n", idade);
     printf("Sua altura eh %.2f.\n", altura);
     printf("Seu peso eh %.2f.\n", peso);
+    printf("Sua taxa de IMC vale %.1f.\n", IMC);
 
     return 0;
 }
