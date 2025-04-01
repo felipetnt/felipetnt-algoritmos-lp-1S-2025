@@ -1,6 +1,8 @@
 #include <stdio.h>
 int main(){
 
+    // set idade , peso , altura.
+    
     int idade;
     float peso;
     float altura;
@@ -14,7 +16,7 @@ int main(){
 
     // IMC - altura sobre peso ao quadrado;
 
-    float IMC = altura / (peso * peso);
+    float IMC = peso * (altura * altura);
 
     printf("Voce tem %d anos.\n", idade);
     printf("Sua altura eh %.2f.\n", altura);
@@ -22,4 +24,5 @@ int main(){
     printf("Sua taxa de IMC vale %.1f.\n", IMC);
 
     return 0;
+
 }
