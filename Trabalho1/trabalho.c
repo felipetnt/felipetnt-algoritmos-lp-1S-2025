@@ -16,7 +16,7 @@ int main()
     {
         // Menu de opções
 
-        printf("\nBem-vindo ao seu assistente de bebidas e escolhas! Seja acomodado com um menu no qual voce pode escolher entre:\n 1- Auxilio na sua escolha de bebidas\n 2- Decida sua bebida ideal para te ser entregue. \n 3- Caso queira sair do acompanhante");
+        printf("\nBem-vindo ao seu assistente de bebidas e escolhas! Seja acomodado com um menu no qual voce pode escolher entre:\n 1- Auxilio na sua escolha de bebidas\n 2- Decida sua bebida ideal para te ser entregue. \n 3- Caso queira sair do acompanhante\n");
         scanf("%d", &cases);
         getchar();
         switch (cases)
@@ -24,13 +24,13 @@ int main()
 
         case 1:
             // Opção 1: Auxílio na escolha de bebidas
-            printf("\nEm razão à sua Assistente Virtual de Luxo, estou aqui para te ajudar a escolher um tipo de bebida para suas comemoracoes e interesses pessoais!\n");
-            printf("\nInsira uma preferência de bebida entre bebidas com alcool ou sem alcool (ALCOLICA OU NAOALCOLICA): ");
+            printf("\nEm razão à sua Assistente Virtual de Luxo, estou aqui para te ajudar a escolher um tipo de bebida para suas comemoracoes e interesses pessoais!");
+            printf("\nInsira uma preferência de bebida entre bebidas com alcool ou sem alcool (ALCOLICA OU NAOALCOLICA): \n");
             do{
                 fgets(inicio, sizeof(inicio), stdin);
                 inicio[strcspn(inicio, "\n")] = 0;
                 if(strcmp(inicio, "ALCOLICA") != 0 && strcmp(inicio, "NAOALCOLICA") != 0){
-                    printf("\nInsira uma preferência de bebida válida entre (ALCOLICA e NAOALCOLICA): ");
+                    printf("\nInsira uma preferência de bebida válida entre (ALCOLICA e NAOALCOLICA): \n");
                 }
                 // Verifica se a entrada é válida
             } while (strcmp(inicio, "ALCOLICA") != 0 && strcmp(inicio, "NAOALCOLICA") != 0);
@@ -38,13 +38,13 @@ int main()
             if (strcmp(inicio, "NAOALCOLICA") == 0){
                 // Bebidas não alcoólicas
                 printf("\n Muito bom! Voce escolheu bebidas nao-alcoolicas! \n");
-                printf("\n Deseja algo mais leve ou com mais sabor? (LEVE, SABOR)): ");
+                printf("\n Deseja algo mais leve ou com mais sabor? (LEVE, SABOR)): \n");
 
                 do{
                     fgets(bebidaBase, sizeof(bebidaBase), stdin);
                     bebidaBase[strcspn(bebidaBase, "\n")] = 0;
                     if(strcmp(bebidaBase, "LEVE") != 0 && strcmp(bebidaBase, "SABOR") != 0){
-                        printf("\nInsira uma preferência de bebida válida entre (LEVE e SABOR): ");
+                        printf("\nInsira uma preferência de bebida válida entre (LEVE e SABOR): \n");
                     }
                     // Verifica se a entrada é válida
                 } while (strcmp(bebidaBase, "LEVE") != 0 && strcmp(bebidaBase, "SABOR") != 0);
@@ -59,19 +59,19 @@ int main()
             } else {
                 // Bebidas alcoólicas
                 printf("\n Muito bom! Voce escolheu bebidas alcoolicas! \n");
-                printf("\nInsira abaixo sua preferência de bebida entre DRINKS ou TRADICIONAIS: (DRINKS, TRADICIONAIS)");
+                printf("\nInsira abaixo sua preferência de bebida entre DRINKS ou TRADICIONAIS: (DRINKS, TRADICIONAIS)\n");
 
                 do {
                     fgets(bebidaBase, sizeof(bebidaBase), stdin);
                     bebidaBase[strcspn(bebidaBase, "\n")] = 0;
                     if(strcmp(bebidaBase, "DRINKS") != 0 && strcmp(bebidaBase, "TRADICIONAIS") != 0){
-                        printf("\nInsira uma preferência de bebida válida entre (DRINKS e TRADICIONAIS): ");
+                        printf("\nInsira uma preferência de bebida válida entre (DRINKS e TRADICIONAIS): \n");
                     }
                     // Verifica se a entrada é válida
                 } while (strcmp(bebidaBase, "TRADICIONAIS") != 0 && strcmp(bebidaBase, "DRINKS") != 0);
 
                 if (strcmp(bebidaBase, "TRADICIONAIS") == 0){
-                    printf("\nInsira abaixo sua preferência de especificação do seu bebida entre DESTILADO e FERMENTADO: (DESTILADO, FERMENTADO) ");
+                    printf("\nInsira abaixo sua preferência de especificação do seu bebida entre DESTILADO e FERMENTADO: (DESTILADO, FERMENTADO) \n");
 
                     do{
                         fgets(bebidaEspecification, sizeof(bebidaEspecification), stdin);
@@ -84,13 +84,13 @@ int main()
 
                     if (strcmp(bebidaEspecification, "DESTILADO") == 0){
                         printf("\n");
-                        printf("\nInsira abaixo sua preferência de especificação do seu bebida entre whiskey e mistura: (WHISKEY, MISTURA) ");
+                        printf("\nInsira abaixo sua preferência de especificação do seu bebida entre whiskey e mistura: (WHISKEY, MISTURA) \n");
 
                         do{
                             fgets(bebidaIdeal, sizeof(bebidaIdeal), stdin);
                             bebidaIdeal[strcspn(bebidaIdeal, "\n")] = 0;
                             if(strcmp(bebidaIdeal, "WHISKEY") != 0 && strcmp(bebidaIdeal, "MISTURA") != 0){
-                                printf("\nInsira uma preferência de bebida válida entre (WHISKEY e MISTURA): ");
+                                printf("\nInsira uma preferência de bebida válida entre (WHISKEY e MISTURA): \n");
                             }
                         } while (strcmp(bebidaIdeal, "WHISKEY") != 0 && strcmp(bebidaIdeal, "MISTURA") != 0);
 
@@ -107,7 +107,7 @@ int main()
                         printf("\nA cerveja Heineken é uma lager leve e refrescante, enquanto a Colorado é uma cerveja artesanal com sabores mais complexos e encorpados.\n");
                     }
                 } else {
-                    printf("\nInsira abaixo sua preferência de especificação de seu drink entre refrescante e forte: (REFRESCANTE, FORTE) ");
+                    printf("\nInsira abaixo sua preferência de especificação de seu drink entre refrescante e forte: (REFRESCANTE, FORTE) \n");
 
                     do{
                         fgets(bebidaEspecification, sizeof(bebidaEspecification), stdin);
@@ -136,20 +136,23 @@ int main()
             break;
         case 3:
             // Opção 3: Sair do programa
-            printf("\nTem certeza que deseja sair do programa? (SIM ou NAO): ");
+            printf("\nTem certeza que deseja sair do programa? (SIM ou NAO): \n");
             do{
                 fgets(continuar, sizeof(continuar), stdin);
                 continuar[strcspn(continuar, "\n")] = 0;
-                printf("\nInsira preferencialmente em caixa alta e as palavras entre: (SIM e NAO): ");
+                if(strcmp(continuar, "SIM") != 0 && strcmp(continuar, "NAO") != 0){
+                    printf("\nInsira uma opção válida entre (SIM e NAO): \n");
+                }
                 if (strcmp(continuar, "SIM") == 0)  {
-                    printf("\nSaindo do programa. Até mais!");
-                }
-                else if (strcmp(continuar, "NAO") == 0){
-                    printf("\nContinuando o programa. \n");
+                    printf("\nDespedida da assistente. Até mais!");
                 } else {
-                    printf("\nOpção inválida. Digite novamente.\n");
+                    if (strcmp(continuar, "NAO") == 0){
+                    printf("\nRetornando a tela inicial! \n");
+                    } else {
+                        printf("\nOpção inválida. Digite novamente.\n");
+                    }
                 }
-            } while (strcmp(continuar, "NAO") == 0 && strcmp(continuar, "SIM") != 0);
+            } while (strcmp(continuar, "NAO") != 0 && strcmp(continuar, "SIM") != 0);
             break;
         }
     } while (strcmp(continuar, "NAO") == 0 || strcmp(continuar, "SIM") != 0);
