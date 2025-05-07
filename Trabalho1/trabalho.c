@@ -112,7 +112,7 @@ int main()
                         fgets(bebidaEspecification, sizeof(bebidaEspecification), stdin);
                         bebidaEspecification[strcspn(bebidaEspecification, "\n")] = 0;
                         if(strcmp(bebidaEspecification, "REFRESCANTE") != 0 && strcmp(bebidaEspecification, "FORTE") != 0){
-                            printf("\nInsira uma preferência de bebida válida entre (REFRESCANTE e FORTE): ");
+                            printf("\nInsira uma preferência de bebida válida entre (REFRESCANTE e FORTE): \n");
                         }
                     } while (strcmp(bebidaEspecification, "REFRESCANTE") != 0 && strcmp(bebidaEspecification, "FORTE") != 0);
 
@@ -121,9 +121,8 @@ int main()
                         printf("\nExperimentar o bebida - Cosmopolitan coquetel clássico conhecido por sua cor rosa vibrante e sabor refrescante\n");
                     } else {
                         printf("\nDe acordo com suas escolhas acredito que a ação ideal seria: ");
-                        printf("\nExperimentar o bebida - Negroni “conhecido pelo seu sabor forte e amargo”);\n");
+                        printf("\nExperimentar o bebida - Negroni conhecido pelo seu sabor forte e amargo\n");
                     }
-                    printf("Reiniciando o menu...");
                 }
             }
             break;
