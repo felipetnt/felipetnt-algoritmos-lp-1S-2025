@@ -10,13 +10,12 @@ int main()
     char bebidaEspecification[20];
     char bebidaIdeal[20];
     char continuar[20] = "NAO";
-    int cases = 0;
+    int cases = 0;    
 
-    do
-    {
+    do{
         // Menu de opções
 
-        printf("\nBem-vindo ao seu assistente de bebidas e escolhas! Seja acomodado com um menu no qual voce pode escolher entre:\n 1- Auxilio na sua escolha de bebidas\n 2- Decida sua bebida ideal para te ser entregue. \n 3- Caso queira sair do acompanhante\n");
+        printf("\nBem-vindo ao seu assistente de bebidas! Seja acomodado com um menu no qual voce pode escolher entre:\n 1- Auxilio na sua escolha de bebidas\n 2- Decida sua bebida ideal para te ser entregue. \n 3- Caso queira sair do assistente!\n");
         scanf("%d", &cases);
         getchar();
         switch (cases)
@@ -124,6 +123,7 @@ int main()
                         printf("\nDe acordo com suas escolhas acredito que a ação ideal seria: ");
                         printf("\nExperimentar o bebida - Negroni “conhecido pelo seu sabor forte e amargo”);\n");
                     }
+                    printf("Reiniciando o menu...");
                 }
             }
             break;
