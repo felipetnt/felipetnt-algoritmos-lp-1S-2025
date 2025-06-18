@@ -1,0 +1,5 @@
+Numero max == 10
+Numero min == 0
+Numero chutado == 5 
+nuemro sorteado == 8
+Usuario nao sorteado 
